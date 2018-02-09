@@ -103,13 +103,19 @@ class TicTacToe extends Component {
       return (gameState[a] === gameState[b] && gameState[a] === gameState[c] && gameState[a])
     })
   }
-
+/*
   turingTest = () => {
-
+    if (this.state.gameOver) {
+      return (
+        <TuringTest
+          recordGame={this.recordGame}
+        />
+      )
+    }
   }
-
-  recordGame = () => {
-
+*/
+  recordGame = (guess) => {
+    console.log(guess)
   }
 
   render() {
@@ -146,6 +152,7 @@ class TicTacToe extends Component {
             move={this.move}
           />
         </Stage>
+        {/* {this.turingTest()}  */}
       </div>
     )
   }
@@ -155,11 +162,11 @@ export default Relay.createContainer(
   TicTacToe, {
     fragments: {
       viewer: () => Relay.QL`
-      fragment on Viewer {
-        user {
-          id
+        fragment on Viewer {
+          user {
+            id
+          }
         }
-      }
       `,
     }
   }

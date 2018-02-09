@@ -1,5 +1,5 @@
 import Auth0Lock from 'auth0-lock'
-import Relay from 'react-relay'
+import Relay from 'react-relay/classic'
 import CreateUser from '../mutations/CreateUser'
 import SigninUser from '../mutations/SigninUser'
 const authDomain = 'snydz.auth0.com'
